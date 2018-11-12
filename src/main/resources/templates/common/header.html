@@ -35,7 +35,7 @@
 <body>
   <!-- Navigation -->
   <div th:fragment="navbar">
-    <img class="img-responsive" src="/images/banner.png" alt="banner" />
+    <!-- <img class="img-responsive" src="/images/banner.png" alt="banner" /> -->
 
     <nav class="navbar navbar-default " role="navigation">
       <div class="container">
@@ -46,7 +46,7 @@
               class="icon-bar"></span> <span class="icon-bar"></span> <span
               class="icon-bar"></span>
           </button>
-          <a class="navbar-brand page-scroll" th:href="@{/userFront}">Home</a>
+          <a class="navbar-brand page-scroll" th:href="@{/home}">Home</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,36 +57,35 @@
               href="#page-top"></a></li>
             <li class="dropdown"><a href="#"
               class="dropdown-toggle" data-toggle="dropdown"
-              role="button" aria-haspopup="true" aria-expanded="false">Accounts
+              role="button" aria-haspopup="true" aria-expanded="false">Invoices
                 <span class="caret"></span>
             </a>
               <ul class="dropdown-menu">
-                <li><a th:href="@{/account/primaryAccount}">Primary</a></li>
+                <li><a th:href="@{/invoices/new}">Create new invoice</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a th:href="@{/account/savingsAccount}">Savings</a></li>
+                <li><a th:href="@{/invoices/input}">Input invoices</a></li>
+                <li><a th:href="@{/invoices/output}">Output invoices</a></li>
               </ul></li>
             <li class="dropdown"><a href="#"
               class="dropdown-toggle" data-toggle="dropdown"
-              role="button" aria-haspopup="true" aria-expanded="false">Transfer
+              role="button" aria-haspopup="true" aria-expanded="false">Products
                 <span class="caret"></span>
             </a>
               <ul class="dropdown-menu">
-                <li><a th:href="@{/transfer/betweenAccounts}">Between
-                    Accounts</a></li>
-                <li><a th:href="@{/transfer/toSomeoneElse}">To
-                    Someone Else</a></li>
+                <li><a th:href="@{/products/new}">Create new product</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a th:href="@{/transfer/recipient}">Add/Edit
-                    Recipient</a></li>
+                <li><a th:href="@{/products/all}">All products</a></li>
               </ul></li>
             <li class="dropdown"><a href="#"
               class="dropdown-toggle" data-toggle="dropdown"
-              role="button" aria-haspopup="true" aria-expanded="false">Appointment
+              role="button" aria-haspopup="true" aria-expanded="false">Companies
                 <span class="caret"></span>
             </a>
               <ul class="dropdown-menu">
-                <li><a th:href="@{/appointment/create}">Schedule
-                    an Appointment</a></li>
+                <li><a th:href="@{/companies/new}">Add new company</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a th:href="@{/companies/all}">All companies</a></li>
+                
               </ul></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">

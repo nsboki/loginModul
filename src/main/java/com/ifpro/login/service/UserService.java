@@ -20,4 +20,7 @@ public interface UserService {
 
 	void disableUser(String username);
 
+	User createUser(User user);
+
+	User saveUser(User user);
 }
